@@ -78,7 +78,7 @@ void loop() {
 
   //If Button (i) is pressed, set key to noteArray(i)
   for(int i=0; i<13; i++) {
-    if((int)button != 0 && int(button) == i) {
+    if((int)button != 0 && (int)button == i) {
       key = noteArray[i];
       delay(50);
     }
