@@ -56,7 +56,7 @@ void setup() {
   //begin reading capacitive input
   cap.begin(0x5A);
 
-  //buttonValues
+  //buttonValues in buttonArray
   buttonArray.setNoPressValue(0); //value when NO button is pressed.
   buttonArray.registerKey(1,809);
   buttonArray.registerKey(2,824);
@@ -76,11 +76,11 @@ void loop() {
 
   unsigned char button = buttonArray.getKey();
 
+  //If Button (i) is pressed, set key to noteArray(i)
   for(int i=0; i<13; i++) {
     if((int)button != 0 && int(button) == i) {
       key = noteArray[i];
-      Serial.println(key);
-      delay(100);
+      delay(50);
     }
   }
 
