@@ -23,7 +23,22 @@ ezAnalogKeypad buttonArray(A0);
 int key = 48;
 int chord = 0;
 int note = 0;
-int noteArray[13] = {0,48,49,50,51,52,53,54,55,56,57,58,59};
+int noteArray[13] = {
+  0,
+  49, //Db
+  56, //Ab
+  51, //Eb
+  58, //Bb
+  53, //F
+  48, //C
+  55, //G
+  50, //D
+  57, //A
+  52, //E
+  59, //B
+  54 //F#  
+};
+
 int chordNote[3][12] = {
   //major = +4, +3, +5
   { 0, 4, 7, 12, 16, 19, 24, 28, 31, 36, 40, 43 },  // maj
