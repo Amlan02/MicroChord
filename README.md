@@ -16,5 +16,4 @@ Reddit User forshee9283 was very kind to come up with a small PCB Design that yo
 I put the RevA PCB files in this github but they are also on his github repo: https://github.com/forshee9283/Strum
 I ordered 10 of these today and will post updates when the boards are here.
 
-
-![MPR121board](https://user-images.githubusercontent.com/42961161/173308597-e32f2706-ea97-44c6-a8c9-e48f4fb1d489.jpg =250x)
+<img src="https://user-images.githubusercontent.com/42961161/173309362-fab22a5c-d46b-4f1f-8e31-f69920780756.png" style="width:500px;">
