@@ -1,7 +1,7 @@
  
 #include <Arduino.h>
-#include <Adafruit_TinyUSB.h>
 #include <MIDI.h>
+#include <Adafruit_TinyUSB.h>
 #include "Adafruit_MPR121.h"
 #include <Wire.h>
 
@@ -15,6 +15,8 @@ MIDI_CREATE_INSTANCE(Adafruit_USBD_MIDI, usb_midi, MIDI);
 #ifndef _BV
 #define _BV(bit) (1 << (bit)) 
 #endif
+
+
 
 Adafruit_MPR121 cap = Adafruit_MPR121();
 
@@ -55,6 +57,10 @@ int chordNote[3][12] = {
 
 
 void setup() {
+
+  Serial.begin(115200);
+
+  while(!Serial);
   
   Wire.begin();
    
@@ -83,11 +89,13 @@ void loop() {
     if ((currtouched & _BV(i)) && !(lasttouched & _BV(i)) ) {
       note = key + chordNote[0][i];
       MIDI.sendNoteOn(note, 110, 1);
+      Serial.println(currtouched);
     }
     // if it *was* touched and now *isnt*
     if (!(currtouched & _BV(i)) && (lasttouched & _BV(i)) ) {
       note = key + chordNote[0][i];
       MIDI.sendNoteOff(note, 0, 1);
+      Serial.println(lasttouched);
     }
   }
 
