@@ -1,4 +1,4 @@
-# MicroChord
+# Midi-Chord
 A midi controller that aims to function like an omnichord
 
 What you need:
