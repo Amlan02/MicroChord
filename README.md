@@ -32,6 +32,8 @@ The code for the pico at the moment has working support for the capacitive touch
 
 Since I have a dayjob I don't have a lot of time to work on this project but I still want to complete it.
 The thing I still need to tackle is handling all the push buttons (3 x 12).
+
 My idea is to use the CD74HC4067 for multiplexing and the MCP23017 as I2C expansion.
 This way all 3x12 buttons can be connected to the board using only 6 pins of the board.
+
 I drafted a code snippet for this idea but didn't test things yet. Next up is testing this idea.
